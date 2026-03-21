@@ -196,7 +196,7 @@ export default function LogPage() {
                         <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
                           {!isAuto && <span style={{ fontSize: 12, fontWeight: 700, color: '#60a5fa' }}>{e.created_by}</span>}
                           {isAuto && <span style={{ fontSize: 10, color: '#334155', fontWeight: 600 }}>AUTO</span>}
-                          {getRoleBadge(e.reported_by_role)}
+                          {getRoleBadge(e.reported_by_role ?? undefined)}
                           {rel && <span style={{ background: '#1e3a5f', color: '#93c5fd', borderRadius: 20, padding: '1px 8px', fontSize: 10 }}>↗ {rel.street}, {rel.city}</span>}
                         </div>
                         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
